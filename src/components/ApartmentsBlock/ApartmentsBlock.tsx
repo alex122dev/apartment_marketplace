@@ -71,6 +71,7 @@ export const ApartmentsBlock = () => {
             </div>
             {isFetchingAll && <Preloader />}
             {errorGetAll && <InfoMessage>{errorGetAll}</InfoMessage>}
+            {itemsList.length === 0 && !isFetchingAll && <InfoMessage>No apartments were found for your request</InfoMessage>}
             <ul className={styles.list}>
                 {itemsList.map(el => <li key={el.id}>
                     <ApartmentsItem item={el} />
