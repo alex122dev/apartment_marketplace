@@ -23,6 +23,7 @@ export const NewApartmentForm: React.FC<PropsType> = ({ item, submit, cancelHand
     const isFetchingUpdating = useAppSelector(state => state.apartmentRD.isFetchingUpdating)
 
     const [formSendError, setFormSendError] = useState('')
+    const [isSendSuccess, setIsSendSuccess] = useState(false)
 
     const formInitialValues: NewApartmentType = {
         rooms: item ? item.rooms : 1,
@@ -48,6 +49,10 @@ export const NewApartmentForm: React.FC<PropsType> = ({ item, submit, cancelHand
                     setFormSendError('')
                     await submit(values)
                     resetForm()
+                    setIsSendSuccess(true)
+                    setTimeout(() => {
+                        setIsSendSuccess(false)
+                    }, 3000);
                 } catch (e: any) {
                     if (e instanceof Error) {
                         setFormSendError(e.message)
@@ -74,6 +79,7 @@ export const NewApartmentForm: React.FC<PropsType> = ({ item, submit, cancelHand
             {({ values, setFieldValue }) => (
                 <Form className={cn(styles.formBody, { [styles.editing]: item })}>
                     {(isFetchingSaving || isFetchingUpdating) && <Preloader className={styles.preloader} />}
+                    {isSendSuccess && <p className={styles.sendSuccess}>The apartment was created/updated  in the system</p>}
                     {formSendError && <p className={styles.errMessage}>Try again, please. Some error occured: {formSendError}</p>}
                     <div className={styles.topBlock}>
                         <Field type='text'
