@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/apartment_marketplace/static/css/main.eb4e72ac.css",
+    "main.js": "/apartment_marketplace/static/js/main.8f9607e2.js",
+    "static/media/arrow-back.svg": "/apartment_marketplace/static/media/arrow-back.aaa2747fd0b543409f4624cd38be68fb.svg",
+    "index.html": "/apartment_marketplace/index.html",
+    "main.eb4e72ac.css.map": "/apartment_marketplace/static/css/main.eb4e72ac.css.map",
+    "main.8f9607e2.js.map": "/apartment_marketplace/static/js/main.8f9607e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb4e72ac.css",
+    "static/js/main.8f9607e2.js"
+  ]
+}
