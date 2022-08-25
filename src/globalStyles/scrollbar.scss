@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+
+
+@media (min-width:$mobile) {
+    ::-webkit-scrollbar {
+        width: 1em;
+        height: 1em;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgba(211, 211, 211, 0.3);
+        border-radius: 100vw;
+        margin: 10px 0;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+        background-color: rgba(211, 211, 211, 0.5);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $greyColor;
+        border-radius: 100vw;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $darkBlueColor;
+    }
+}

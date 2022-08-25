@@ -1,0 +1,180 @@
+@import '../../../globalStyles/variables.scss';
+
+.formBody {
+    position: relative;
+    padding: 20px;
+    background-color: $formBgColor;
+    transition: all 0.3s ease 0s;
+
+    &.editing {
+        background-color: $yellowColor;
+    }
+
+    @media (max-width:$mobile) {
+        padding: 10px;
+        margin: 0 -10px;
+    }
+}
+
+.preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.errMessage {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.topBlock {
+    display: flex;
+    column-gap: 10px;
+
+    margin-bottom: 20px;
+
+    @media (max-width:$mobile) {
+        flex-wrap: wrap;
+    }
+
+    .titleBlock {
+        flex: 1 1 auto;
+
+        @media (max-width:$mobile) {
+            flex: 0 0 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .selectBlock {
+        @media (max-width: 426px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .priceBlock {
+        flex: 0 0 100px;
+
+        @media (max-width: $mobile) {
+            flex: 1 1 auto;
+        }
+    }
+
+    .btnBlock {
+        align-self: flex-start;
+        margin-top: 23px;
+        display: flex;
+        column-gap: 10px;
+
+        @media (max-width:$mobile) {
+            margin-left: auto;
+            flex: 0 0 100%;
+            justify-content: space-between;
+        }
+    }
+}
+
+.inputError {
+    color: red;
+}
+
+.formInput {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #EDEDED;
+    background-color: #fff;
+    border-radius: 5px;
+
+    font-size: 20px;
+    padding: 0 15px;
+
+    outline: none;
+
+    &.inpError {
+        border: 2px solid red;
+    }
+
+    &:focus {
+        border: 2px solid green;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 3px;
+    }
+}
+
+// hide arrows
+.inputNumberType {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+        -moz-appearance: number-input;
+    }
+}
+
+.formTextarea {
+    resize: vertical;
+
+    width: 100%;
+    min-height: 100px;
+    border: 2px solid #EDEDED;
+    border-radius: 5px;
+
+    font-size: 20px;
+    padding: 5px 15px;
+
+    outline: none;
+
+    &.inpError {
+        border: 2px solid red;
+    }
+
+    &:focus {
+        border: 2px solid green;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 3px;
+    }
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+        //margin-bottom: 20px;
+    }
+}
+
+.labelInput {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.sendBtn {}
+
+.cancelBtn {}
+
+.postform__sending {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.postform__success {
+    font-size: 22px;
+    font-weight: 700;
+    color: green;
+    margin-bottom: 15px;
+}

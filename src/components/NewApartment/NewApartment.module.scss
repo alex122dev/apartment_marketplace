@@ -1,0 +1,14 @@
+@import '../../globalStyles/variables.scss';
+
+.container {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}

@@ -1,0 +1,35 @@
+@import '../../globalStyles/variables.scss';
+
+.container {
+    flex: 1 1 auto;
+    padding: 10px;
+    background-color: $formBgColor;
+
+    @media (max-width:$mobile) {
+        margin: -10px;
+    }
+}
+
+.topBlock {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+
+    @media (max-width:$mobileSmall) {
+        font-size: 24px;
+    }
+}
+
+.homeBtn {
+    align-self: flex-start;
+}

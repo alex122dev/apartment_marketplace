@@ -1,0 +1,42 @@
+@import '../../globalStyles/variables.scss';
+
+
+.container {
+    padding: 10px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.rooms {
+    margin-bottom: 10px;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.price {
+    margin-bottom: 15px;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+.descTitle {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10px;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+        border-bottom: 2px solid $greyColor;
+    }
+}
+
+.description {}

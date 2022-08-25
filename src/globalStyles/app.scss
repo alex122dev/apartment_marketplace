@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+.app {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+
+    padding: 20px;
+
+    @media (max-width:$mobile) {
+        padding: 10px;
+    }
+}
